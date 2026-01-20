@@ -11,20 +11,20 @@
 | Feature | Status | Progress | Spec |
 |---------|--------|----------|------|
 | [project-setup](./.archive/project-setup.md) | ✅ Complete | 4/4 | N/A (foundational) |
-| [zoom-auth](./zoom-auth.md) | 🔄 In Progress | 5/6 | [spec](../specs/zoom-auth.md) |
+| [zoom-auth](./.archive/zoom-auth.md) | ✅ Complete | 6/6 | [spec](../specs/zoom-auth.md) |
 | [list-recordings](./list-recordings.md) | ⏳ Pending | 0/5 | [spec](../specs/list-recordings.md) |
 | [get-recording](./get-recording.md) | ⏳ Pending | 0/4 | [spec](../specs/get-recording.md) |
 | [mcp-server](./mcp-server.md) | ⏳ Pending | 0/3 | N/A (integration) |
 
-**Total Tasks:** 22 (9 complete)
+**Total Tasks:** 22 (10 complete)
 
 ---
 
 ## Current Focus
 
-**Active:** [zoom-auth.md](./zoom-auth.md)
+**Active:** [list-recordings.md](./list-recordings.md)
 
-Next task: P3.1 - Create auth module index
+Next task: P1.1 - Create recording types
 
 ---
 
@@ -34,8 +34,8 @@ The features must be implemented in this order due to dependencies:
 
 ```
 1. project-setup     (no dependencies - foundational) ✅ COMPLETE
-2. zoom-auth         (depends on: project-setup) <- CURRENT
-3. list-recordings   (depends on: zoom-auth)
+2. zoom-auth         (depends on: project-setup) ✅ COMPLETE
+3. list-recordings   (depends on: zoom-auth) <- CURRENT
 4. get-recording     (depends on: zoom-auth)
 5. mcp-server        (depends on: all above)
 ```
@@ -59,7 +59,7 @@ Tasks not tied to a specific feature:
 | tsconfig.json | N/A | ✅ Implemented | - |
 | src/auth/config.ts | Planned | ✅ Implemented | - |
 | src/auth/zoom-auth.ts | Planned | ✅ Implemented | - |
-| src/auth/index.ts | Planned | ❌ Missing | Full implementation needed |
+| src/auth/index.ts | Planned | ✅ Implemented | - |
 | src/clients/zoom-client.ts | Planned | ❌ Missing | Full implementation needed |
 | src/types/recordings.ts | Planned | ❌ Missing | Full implementation needed |
 | src/tools/recordings/list.ts | Planned | ❌ Missing | Full implementation needed |
@@ -67,7 +67,7 @@ Tasks not tied to a specific feature:
 | src/tools/recordings/index.ts | Planned | ❌ Missing | Full implementation needed |
 | src/index.ts | Planned | ⚠️ Stub only | Full implementation needed |
 
-**Conclusion:** Project foundation complete. Next: implement zoom-auth feature.
+**Conclusion:** Auth module complete. Next: implement list-recordings feature.
 
 ---
 
@@ -76,3 +76,4 @@ Tasks not tied to a specific feature:
 Completed features moved to `.archive/`:
 
 - [project-setup.md](./.archive/project-setup.md) - Project foundation (package.json, tsconfig, biome, directory structure)
+- [zoom-auth.md](./.archive/zoom-auth.md) - Zoom Server-to-Server OAuth authentication
