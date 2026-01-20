@@ -14,17 +14,17 @@
 | [zoom-auth](./.archive/zoom-auth.md) | ✅ Complete | 6/6 | [spec](../specs/zoom-auth.md) |
 | [list-recordings](./.archive/list-recordings.md) | ✅ Complete | 5/5 | [spec](../specs/list-recordings.md) |
 | [get-recording](./.archive/get-recording.md) | ✅ Complete | 4/4 | [spec](../specs/get-recording.md) |
-| [mcp-server](./mcp-server.md) | 🔄 In Progress | 2/3 | N/A (integration) |
+| [mcp-server](./.archive/mcp-server.md) | ✅ Complete | 3/3 | N/A (integration) |
 
-**Total Tasks:** 22 (21 complete)
+**Total Tasks:** 22 (22 complete)
 
 ---
 
 ## Current Focus
 
-**Active:** [mcp-server.md](./mcp-server.md)
+**Active:** None (all features complete)
 
-Next task: P1.3 - Add graceful shutdown
+Next task: Cross-cutting tasks (P99.x) or project complete
 
 ---
 
@@ -37,7 +37,7 @@ The features must be implemented in this order due to dependencies:
 2. zoom-auth         (depends on: project-setup) ✅ COMPLETE
 3. list-recordings   (depends on: zoom-auth) ✅ COMPLETE
 4. get-recording     (depends on: zoom-auth) ✅ COMPLETE
-5. mcp-server        (depends on: all above) <- CURRENT
+5. mcp-server        (depends on: all above) ✅ COMPLETE
 ```
 
 ---
@@ -65,9 +65,9 @@ Tasks not tied to a specific feature:
 | src/tools/recordings/list.ts | Planned | ✅ Implemented | - |
 | src/tools/recordings/get.ts | Planned | ✅ Implemented | - |
 | src/tools/recordings/index.ts | Planned | ✅ Implemented | - |
-| src/index.ts | Planned | 🔄 P1.2 complete | Graceful shutdown needed (P1.3) |
+| src/index.ts | Planned | ✅ Implemented | - |
 
-**Conclusion:** Tool registration complete. Next: add graceful shutdown (P1.3).
+**Conclusion:** All core features implemented. Cross-cutting tasks (P99.x) remain.
 
 ---
 
@@ -79,3 +79,4 @@ Completed features moved to `.archive/`:
 - [zoom-auth.md](./.archive/zoom-auth.md) - Zoom Server-to-Server OAuth authentication
 - [list-recordings.md](./.archive/list-recordings.md) - List recordings MCP tool and barrel export
 - [get-recording.md](./.archive/get-recording.md) - Get recording details MCP tool
+- [mcp-server.md](./.archive/mcp-server.md) - MCP server entry point and integration

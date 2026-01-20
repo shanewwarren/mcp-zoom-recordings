@@ -114,6 +114,15 @@ async function main(): Promise<void> {
   // Connect using stdio transport
   const transport = new StdioServerTransport();
   await server.connect(transport);
+
+  // Set up graceful shutdown handlers
+  const shutdown = async () => {
+    await server.close();
+    process.exit(0);
+  };
+
+  process.on("SIGINT", shutdown);
+  process.on("SIGTERM", shutdown);
 }
 
 // Start the server
