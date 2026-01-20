@@ -1,2 +1,11 @@
 # Fresher
 .fresher/
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Lock files (using bun.lockb when bun is available)
+package-lock.json
