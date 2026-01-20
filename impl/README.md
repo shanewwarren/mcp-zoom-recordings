@@ -11,12 +11,12 @@
 | Feature | Status | Progress | Spec |
 |---------|--------|----------|------|
 | [project-setup](./.archive/project-setup.md) | ✅ Complete | 4/4 | N/A (foundational) |
-| [zoom-auth](./zoom-auth.md) | ⏳ Pending | 0/6 | [spec](../specs/zoom-auth.md) |
+| [zoom-auth](./zoom-auth.md) | 🔄 In Progress | 2/6 | [spec](../specs/zoom-auth.md) |
 | [list-recordings](./list-recordings.md) | ⏳ Pending | 0/5 | [spec](../specs/list-recordings.md) |
 | [get-recording](./get-recording.md) | ⏳ Pending | 0/4 | [spec](../specs/get-recording.md) |
 | [mcp-server](./mcp-server.md) | ⏳ Pending | 0/3 | N/A (integration) |
 
-**Total Tasks:** 22 (4 complete)
+**Total Tasks:** 22 (6 complete)
 
 ---
 
@@ -24,7 +24,7 @@
 
 **Active:** [zoom-auth.md](./zoom-auth.md)
 
-Next task: P1.1 - Create config.ts for environment variable loading
+Next task: P2.2 - Create ZoomAuth class with token fetching
 
 ---
 
@@ -57,7 +57,7 @@ Tasks not tied to a specific feature:
 |-----------|-------------|----------------|-----|
 | package.json | N/A | ✅ Implemented | - |
 | tsconfig.json | N/A | ✅ Implemented | - |
-| src/auth/config.ts | Planned | ❌ Missing | Full implementation needed |
+| src/auth/config.ts | Planned | ✅ Implemented | - |
 | src/auth/zoom-auth.ts | Planned | ❌ Missing | Full implementation needed |
 | src/auth/index.ts | Planned | ❌ Missing | Full implementation needed |
 | src/clients/zoom-client.ts | Planned | ❌ Missing | Full implementation needed |

@@ -2,7 +2,7 @@
 
 **Spec:** [specs/zoom-auth.md](../specs/zoom-auth.md)
 **Status:** Pending
-**Last Updated:** 2026-01-20
+**Last Updated:** 2026-01-20 (P1.1 complete)
 
 ---
 
@@ -24,7 +24,7 @@ Implement Server-to-Server OAuth 2.0 authentication for Zoom API. This is the fo
 
 #### P1.1: Create ZoomAuthConfig type and loader
 
-- [ ] Create config loader with environment variable validation
+- [x] Create config loader with environment variable validation
   - **File:** `src/auth/config.ts`
   - **Refs:** specs/zoom-auth.md §4.1
   - **Complexity:** low
@@ -39,13 +39,14 @@ Implement Server-to-Server OAuth 2.0 authentication for Zoom API. This is the fo
 
 #### P2.1: Create ZoomAuthError class
 
-- [ ] Define custom error class for auth-related errors
-  - **File:** `src/auth/zoom-auth.ts`
+- [x] Define custom error class for auth-related errors
+  - **File:** `src/auth/config.ts` (implemented here since config needs it)
   - **Refs:** specs/zoom-auth.md §4.3
   - **Complexity:** low
   - **Details:**
     - Extend `Error` class
     - Include `name = 'ZoomAuthError'`
+  - **Note:** Implemented in config.ts to avoid circular dependency
 
 #### P2.2: Create ZoomAuth class with token fetching
 
