@@ -2,7 +2,7 @@
 
 **Spec:** [specs/zoom-auth.md](../specs/zoom-auth.md)
 **Status:** Pending
-**Last Updated:** 2026-01-20 (P1.1 complete)
+**Last Updated:** 2026-01-20 (P2.2, P2.3, P2.4 complete)
 
 ---
 
@@ -50,7 +50,7 @@ Implement Server-to-Server OAuth 2.0 authentication for Zoom API. This is the fo
 
 #### P2.2: Create ZoomAuth class with token fetching
 
-- [ ] Implement core token fetch logic
+- [x] Implement core token fetch logic
   - **File:** `src/auth/zoom-auth.ts`
   - **Refs:** specs/zoom-auth.md §4.2
   - **Complexity:** medium
@@ -69,7 +69,7 @@ Implement Server-to-Server OAuth 2.0 authentication for Zoom API. This is the fo
 
 #### P2.3: Add token caching with expiry buffer
 
-- [ ] Implement token caching to avoid unnecessary requests
+- [x] Implement token caching to avoid unnecessary requests
   - **File:** `src/auth/zoom-auth.ts`
   - **Refs:** specs/zoom-auth.md §4.2
   - **Complexity:** medium
@@ -85,7 +85,7 @@ Implement Server-to-Server OAuth 2.0 authentication for Zoom API. This is the fo
 
 #### P2.4: Define ZoomTokenResponse type
 
-- [ ] Create type for Zoom OAuth token response
+- [x] Create type for Zoom OAuth token response
   - **File:** `src/auth/zoom-auth.ts`
   - **Refs:** specs/zoom-auth.md §4.2
   - **Complexity:** low
