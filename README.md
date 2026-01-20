@@ -76,6 +76,12 @@ Add to your Claude Desktop configuration file:
 
 Replace `/path/to/mcp-zoom-recordings` with the actual path to this project.
 
+### Claude Code CLI
+
+```bash
+claude mcp add zoom-recordings -e ZOOM_API_KEY=your-client-id -e ZOOM_API_SECRET=your-client-secret -e ZOOM_ACCOUNT_ID=your-account-id -- node /path/to/mcp-zoom-recordings/dist/index.js
+```
+
 ### Environment Variables
 
 | Variable | Description |
