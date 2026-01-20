@@ -46,7 +46,7 @@ The features must be implemented in this order due to dependencies:
 
 Tasks not tied to a specific feature:
 
-- [ ] P99.1 - Update README.md with actual usage instructions
+- [x] P99.1 - Update README.md with actual usage instructions
 - [ ] P99.2 - Add integration tests (if test framework configured)
 
 ---
