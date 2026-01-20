@@ -2,7 +2,7 @@
 
 **Spec:** [specs/list-recordings.md](../specs/list-recordings.md)
 **Status:** Pending
-**Last Updated:** 2026-01-20
+**Last Updated:** 2026-01-20 (P1.1 complete)
 
 ---
 
@@ -24,7 +24,7 @@ Implement the `list_recordings` MCP tool that lists Zoom cloud recordings with o
 
 #### P1.1: Create recording type definitions
 
-- [ ] Define TypeScript types for recordings
+- [x] Define TypeScript types for recordings
   - **File:** `src/types/recordings.ts`
   - **Refs:** specs/list-recordings.md §4.2
   - **Complexity:** medium
