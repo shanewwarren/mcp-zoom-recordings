@@ -2,7 +2,7 @@
 
 **Spec:** [specs/list-recordings.md](../specs/list-recordings.md)
 **Status:** In Progress
-**Last Updated:** 2026-01-20 (P2.2 complete)
+**Last Updated:** 2026-01-20 (P3.1 complete)
 
 ---
 
@@ -88,7 +88,7 @@ Implement the `list_recordings` MCP tool that lists Zoom cloud recordings with o
 
 #### P3.1: Create list_recordings tool handler
 
-- [ ] Implement MCP tool for listing recordings
+- [x] Implement MCP tool for listing recordings
   - **File:** `src/tools/recordings/list.ts`
   - **Refs:** specs/list-recordings.md §4.1
   - **Complexity:** medium

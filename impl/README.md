@@ -12,11 +12,11 @@
 |---------|--------|----------|------|
 | [project-setup](./.archive/project-setup.md) | ✅ Complete | 4/4 | N/A (foundational) |
 | [zoom-auth](./.archive/zoom-auth.md) | ✅ Complete | 6/6 | [spec](../specs/zoom-auth.md) |
-| [list-recordings](./list-recordings.md) | 🔄 In Progress | 3/5 | [spec](../specs/list-recordings.md) |
+| [list-recordings](./list-recordings.md) | 🔄 In Progress | 4/5 | [spec](../specs/list-recordings.md) |
 | [get-recording](./get-recording.md) | ⏳ Pending | 0/4 | [spec](../specs/get-recording.md) |
 | [mcp-server](./mcp-server.md) | ⏳ Pending | 0/3 | N/A (integration) |
 
-**Total Tasks:** 22 (13 complete)
+**Total Tasks:** 22 (14 complete)
 
 ---
 
@@ -24,7 +24,7 @@
 
 **Active:** [list-recordings.md](./list-recordings.md)
 
-Next task: P3.1 - Create list_recordings tool handler
+Next task: P3.2 - Create recordings tool index
 
 ---
 
