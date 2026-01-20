@@ -2,7 +2,7 @@
 
 **Spec:** [specs/get-recording.md](../specs/get-recording.md)
 **Status:** Pending
-**Last Updated:** 2026-01-20
+**Last Updated:** 2026-01-20T14:30:00Z
 
 ---
 
@@ -25,7 +25,7 @@ Implement the `get_recording` MCP tool that retrieves detailed recording informa
 
 #### P1.1: Add RecordingFile types
 
-- [ ] Extend type definitions for recording files
+- [x] Extend type definitions for recording files
   - **File:** `src/types/recordings.ts`
   - **Refs:** specs/get-recording.md §4.2
   - **Complexity:** medium

@@ -13,10 +13,10 @@
 | [project-setup](./.archive/project-setup.md) | ✅ Complete | 4/4 | N/A (foundational) |
 | [zoom-auth](./.archive/zoom-auth.md) | ✅ Complete | 6/6 | [spec](../specs/zoom-auth.md) |
 | [list-recordings](./.archive/list-recordings.md) | ✅ Complete | 5/5 | [spec](../specs/list-recordings.md) |
-| [get-recording](./get-recording.md) | ⏳ Pending | 0/4 | [spec](../specs/get-recording.md) |
+| [get-recording](./get-recording.md) | 🔄 In Progress | 1/4 | [spec](../specs/get-recording.md) |
 | [mcp-server](./mcp-server.md) | ⏳ Pending | 0/3 | N/A (integration) |
 
-**Total Tasks:** 22 (15 complete)
+**Total Tasks:** 22 (16 complete)
 
 ---
 
@@ -24,7 +24,7 @@
 
 **Active:** [get-recording.md](./get-recording.md)
 
-Next task: P1.1 - Create get recording type definitions
+Next task: P1.2 - Create UUID encoding helper
 
 ---
 
