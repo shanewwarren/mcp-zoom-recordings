@@ -2,7 +2,7 @@
 
 **Spec:** [specs/get-recording.md](../specs/get-recording.md)
 **Status:** In Progress
-**Last Updated:** 2026-01-20
+**Last Updated:** 2026-01-20 (P2.1 completed)
 
 ---
 
@@ -74,7 +74,7 @@ Implement the `get_recording` MCP tool that retrieves detailed recording informa
 
 #### P2.1: Implement getRecording method
 
-- [ ] Add method to fetch recording details from Zoom API
+- [x] Add method to fetch recording details from Zoom API
   - **File:** `src/clients/zoom-client.ts`
   - **Refs:** specs/get-recording.md §4.3
   - **Complexity:** medium

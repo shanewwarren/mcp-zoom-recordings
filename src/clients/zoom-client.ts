@@ -6,8 +6,11 @@
 
 import type { ZoomAuth } from "../auth";
 import type {
+  GetRecordingInput,
+  GetRecordingOutput,
   ListRecordingsInput,
   ListRecordingsOutput,
+  RecordingFile,
   RecordingMeeting,
 } from "../types/recordings";
 
@@ -191,6 +194,64 @@ export class ZoomClient {
       total_records: response.total_records,
     };
   }
+
+  /**
+   * Get recording details for a specific meeting.
+   *
+   * @param input - Meeting ID or UUID
+   * @returns Recording details including download URLs for all files
+   * @throws {ZoomApiError} When recording is not found or request fails
+   */
+  async getRecording(input: GetRecordingInput): Promise<GetRecordingOutput> {
+    const encodedId = encodeMeetingId(input.meeting_id);
+
+    try {
+      const response = await this.request<ZoomRecordingDetailsResponse>(
+        `/meetings/${encodedId}/recordings`
+      );
+
+      // Transform recording files to our output format
+      const recordingFiles: RecordingFile[] = (
+        response.recording_files || []
+      ).map((file) => ({
+        id: file.id,
+        meeting_id: file.meeting_id,
+        recording_start: file.recording_start,
+        recording_end: file.recording_end,
+        file_type: file.file_type as RecordingFile["file_type"],
+        file_extension: file.file_extension,
+        file_size: file.file_size,
+        download_url: file.download_url,
+        status: file.status as RecordingFile["status"],
+        recording_type: file.recording_type as RecordingFile["recording_type"],
+      }));
+
+      return {
+        uuid: response.uuid,
+        id: response.id,
+        topic: response.topic,
+        start_time: response.start_time,
+        duration: response.duration,
+        host_email: response.host_email,
+        total_size: response.total_size,
+        recording_files: recordingFiles,
+        password: response.password,
+      };
+    } catch (error) {
+      if (error instanceof ZoomApiError) {
+        if (error.statusCode === 404) {
+          throw new ZoomApiError(
+            `Recording not found for meeting: ${input.meeting_id}`,
+            404
+          );
+        }
+        if (error.statusCode === 400) {
+          throw new ZoomApiError("Invalid meeting ID format", 400);
+        }
+      }
+      throw error;
+    }
+  }
 }
 
 /**
@@ -261,4 +322,31 @@ interface ZoomRecordingFile {
   file_size: number;
   status: string;
   recording_type: string;
+}
+
+/**
+ * Raw recording file with download URL from Zoom API.
+ */
+interface ZoomRecordingFileWithDownload extends ZoomRecordingFile {
+  download_url: string;
+  play_url?: string;
+}
+
+/**
+ * Raw Zoom API response for recording details.
+ */
+interface ZoomRecordingDetailsResponse {
+  uuid: string;
+  id: number;
+  account_id: string;
+  host_id: string;
+  host_email: string;
+  topic: string;
+  type: number;
+  start_time: string;
+  duration: number;
+  total_size: number;
+  recording_count: number;
+  password?: string;
+  recording_files?: ZoomRecordingFileWithDownload[];
 }
