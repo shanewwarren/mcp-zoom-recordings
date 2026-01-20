@@ -32,7 +32,8 @@ export const ListRecordingsInputSchema = z.object({
     .describe("Token for fetching next page of results"),
 });
 
-export type ListRecordingsInput = z.infer<typeof ListRecordingsInputSchema>;
+/** Input type for the listRecordings client method (before Zod parsing). */
+export type ListRecordingsInput = z.input<typeof ListRecordingsInputSchema>;
 
 /**
  * Summary of a meeting with recordings.

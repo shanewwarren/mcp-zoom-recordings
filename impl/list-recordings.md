@@ -1,8 +1,8 @@
 # List Recordings Implementation
 
 **Spec:** [specs/list-recordings.md](../specs/list-recordings.md)
-**Status:** Pending
-**Last Updated:** 2026-01-20 (P2.1 complete)
+**Status:** In Progress
+**Last Updated:** 2026-01-20 (P2.2 complete)
 
 ---
 
@@ -67,7 +67,7 @@ Implement the `list_recordings` MCP tool that lists Zoom cloud recordings with o
 
 #### P2.2: Implement listRecordings method
 
-- [ ] Add method to fetch recordings from Zoom API
+- [x] Add method to fetch recordings from Zoom API
   - **File:** `src/clients/zoom-client.ts`
   - **Refs:** specs/list-recordings.md §4.3
   - **Complexity:** medium
