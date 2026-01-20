@@ -14,9 +14,9 @@
 | [zoom-auth](./.archive/zoom-auth.md) | ✅ Complete | 6/6 | [spec](../specs/zoom-auth.md) |
 | [list-recordings](./.archive/list-recordings.md) | ✅ Complete | 5/5 | [spec](../specs/list-recordings.md) |
 | [get-recording](./.archive/get-recording.md) | ✅ Complete | 4/4 | [spec](../specs/get-recording.md) |
-| [mcp-server](./mcp-server.md) | 🔄 In Progress | 1/3 | N/A (integration) |
+| [mcp-server](./mcp-server.md) | 🔄 In Progress | 2/3 | N/A (integration) |
 
-**Total Tasks:** 22 (20 complete)
+**Total Tasks:** 22 (21 complete)
 
 ---
 
@@ -24,7 +24,7 @@
 
 **Active:** [mcp-server.md](./mcp-server.md)
 
-Next task: P1.2 - Register tools with server
+Next task: P1.3 - Add graceful shutdown
 
 ---
 
@@ -65,9 +65,9 @@ Tasks not tied to a specific feature:
 | src/tools/recordings/list.ts | Planned | ✅ Implemented | - |
 | src/tools/recordings/get.ts | Planned | ✅ Implemented | - |
 | src/tools/recordings/index.ts | Planned | ✅ Implemented | - |
-| src/index.ts | Planned | 🔄 P1.1 complete | Tool handlers needed (P1.2) |
+| src/index.ts | Planned | 🔄 P1.2 complete | Graceful shutdown needed (P1.3) |
 
-**Conclusion:** get-recording feature complete. Next: implement mcp-server integration.
+**Conclusion:** Tool registration complete. Next: add graceful shutdown (P1.3).
 
 ---
 

@@ -41,7 +41,7 @@ Implement the MCP server entry point that wires together authentication, client,
 
 #### P1.2: Register tools with server
 
-- [ ] Connect tools to MCP server
+- [x] Connect tools to MCP server
   - **File:** `src/index.ts`
   - **Refs:** @modelcontextprotocol/sdk patterns
   - **Complexity:** medium
