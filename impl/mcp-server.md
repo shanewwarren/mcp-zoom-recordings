@@ -1,16 +1,16 @@
 # MCP Server Implementation
 
 **Spec:** N/A (integration layer, derived from CLAUDE.md)
-**Status:** Pending
+**Status:** In Progress
 **Last Updated:** 2026-01-20
 
 ---
 
 ## Dependencies
 
-- ⏳ zoom-auth (pending)
-- ⏳ list-recordings (pending)
-- ⏳ get-recording (pending)
+- ✅ zoom-auth (complete)
+- ✅ list-recordings (complete)
+- ✅ get-recording (complete)
 
 ---
 
@@ -26,7 +26,7 @@ Implement the MCP server entry point that wires together authentication, client,
 
 #### P1.1: Create MCP server with stdio transport
 
-- [ ] Implement main entry point
+- [x] Implement main entry point
   - **File:** `src/index.ts`
   - **Refs:** CLAUDE.md, @modelcontextprotocol/sdk docs
   - **Complexity:** medium
