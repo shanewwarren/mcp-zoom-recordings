@@ -2,7 +2,7 @@
 
 **Spec:** [specs/list-recordings.md](../specs/list-recordings.md)
 **Status:** Pending
-**Last Updated:** 2026-01-20 (P1.1 complete)
+**Last Updated:** 2026-01-20 (P2.1 complete)
 
 ---
 
@@ -54,7 +54,7 @@ Implement the `list_recordings` MCP tool that lists Zoom cloud recordings with o
 
 #### P2.1: Create ZoomClient class
 
-- [ ] Implement Zoom API wrapper for recordings
+- [x] Implement Zoom API wrapper for recordings
   - **File:** `src/clients/zoom-client.ts`
   - **Refs:** specs/list-recordings.md §4.3
   - **Complexity:** medium

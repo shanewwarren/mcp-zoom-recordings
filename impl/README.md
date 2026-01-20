@@ -12,11 +12,11 @@
 |---------|--------|----------|------|
 | [project-setup](./.archive/project-setup.md) | ✅ Complete | 4/4 | N/A (foundational) |
 | [zoom-auth](./.archive/zoom-auth.md) | ✅ Complete | 6/6 | [spec](../specs/zoom-auth.md) |
-| [list-recordings](./list-recordings.md) | 🔄 In Progress | 1/5 | [spec](../specs/list-recordings.md) |
+| [list-recordings](./list-recordings.md) | 🔄 In Progress | 2/5 | [spec](../specs/list-recordings.md) |
 | [get-recording](./get-recording.md) | ⏳ Pending | 0/4 | [spec](../specs/get-recording.md) |
 | [mcp-server](./mcp-server.md) | ⏳ Pending | 0/3 | N/A (integration) |
 
-**Total Tasks:** 22 (11 complete)
+**Total Tasks:** 22 (12 complete)
 
 ---
 
@@ -24,7 +24,7 @@
 
 **Active:** [list-recordings.md](./list-recordings.md)
 
-Next task: P2.1 - Create ZoomClient class
+Next task: P2.2 - Implement listRecordings method
 
 ---
 
@@ -60,7 +60,7 @@ Tasks not tied to a specific feature:
 | src/auth/config.ts | Planned | ✅ Implemented | - |
 | src/auth/zoom-auth.ts | Planned | ✅ Implemented | - |
 | src/auth/index.ts | Planned | ✅ Implemented | - |
-| src/clients/zoom-client.ts | Planned | ❌ Missing | Full implementation needed |
+| src/clients/zoom-client.ts | Planned | ⚠️ Partial | Needs listRecordings method |
 | src/types/recordings.ts | Planned | ✅ Implemented | - |
 | src/tools/recordings/list.ts | Planned | ❌ Missing | Full implementation needed |
 | src/tools/recordings/get.ts | Planned | ❌ Missing | Full implementation needed |
