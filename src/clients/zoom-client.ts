@@ -11,6 +11,22 @@ import type {
   RecordingMeeting,
 } from "../types/recordings";
 
+/**
+ * Encode a meeting ID for use in Zoom API URL paths.
+ *
+ * Meeting UUIDs that start with "/" or contain "//" must be double-encoded
+ * to comply with Zoom's API requirements.
+ *
+ * @param meetingId - The meeting UUID or numeric meeting ID
+ * @returns URL-encoded meeting ID suitable for use in API paths
+ */
+export function encodeMeetingId(meetingId: string): string {
+  if (meetingId.startsWith("/") || meetingId.includes("//")) {
+    return encodeURIComponent(encodeURIComponent(meetingId));
+  }
+  return encodeURIComponent(meetingId);
+}
+
 const BASE_URL = "https://api.zoom.us/v2";
 
 /**
